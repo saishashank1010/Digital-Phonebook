@@ -1,0 +1,35 @@
+<div class='container-fluid'>
+    <form [formGroup]='contactForm'>
+        <div class="form-row">
+        <div class='form-group col-md-6'>
+            <label for='firstName'>First Name</label>
+            <input class='form-control' id='firstName' [(ngModel)]='contact.firstName' formControlName='firstName'/>
+    </div>
+    <div class='form-group col-md-6'>
+        <label for='lastName'>Last Name</label>
+        <input class='form-control' id='lastName' [(ngModel)]='contact.lastName' formControlName='lastName'/>
+    </div>
+    </div>
+    <div class='form-group'>
+        <label for='email'>Email ID</label>
+        <input class='form-control' id='email' [(ngModel)]='contact.email' formControlName='eMail'/>
+    </div>
+    <div class="form-row">
+    <div class='form-group col-md-6'>
+        <label for='phone'>Phone Number</label>
+        <input class='form-control' id='phone' [(ngModel)]='contact.phoneNumber' formControlName='phoneNumber'/>
+    </div>
+    <div class='form-group col-md-6'>
+          <label for='status'>Status</label><br>
+          <input id="Active" type="radio" value="Active" [(ngModel)]='contact.status' formControlName="status">
+          <label for="Active">Active</label>&nbsp;&nbsp;
+          <input id="Inactive" type="radio" value="Inactive" [(ngModel)]='contact.status' formControlName="status">
+          <label for="Inactive">Inactive</label>
+    </div>
+    </div>
+    <div>
+    <button class='btn btn-primary' (click)="saveContact()">Save</button>&nbsp;&nbsp;
+    <button class='btn btn-secondary' (click)="goBack()">Go back</button>
+    </div>
+    </form>
+    </div>

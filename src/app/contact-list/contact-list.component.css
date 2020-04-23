@@ -1,0 +1,8 @@
+.card{
+    width: 48%;
+    display:inline-block;
+    margin: 10px
+}
+.btn{
+    margin-right: 5px;
+}

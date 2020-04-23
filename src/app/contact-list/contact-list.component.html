@@ -1,0 +1,17 @@
+<div class='container'>
+    <div class="card mb-3 text-white" *ngFor='let contact of contacts'
+        [ngClass]="{'bg-danger':contact.status=='Inactive','bg-info':contact.status=='Active'}">
+        <div class="card-body">
+            <h5 class='card-title'>{{contact.firstName}} {{contact.lastName}}</h5>
+            <ul class='card-text'>
+                <li>Phone: {{contact.phoneNumber}}</li>
+                <li>Email ID: {{contact.email}}</li>
+                <li>Status: {{contact.status}}</li>
+            </ul>
+        </div>
+        <div class='card-footer'>
+            <button type='button' class='btn btn-light' [routerLink]="['/editContact', contact.id]">Edit</button>
+            <button type='button' class='btn btn-danger' (click)='delete(contact)'>Delete</button>
+        </div>
+    </div>
+</div>
