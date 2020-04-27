@@ -1,0 +1,18 @@
+[
+    { 
+     "id": "1",
+     "firstName":"abc",
+     "lastName":"cba",
+     "email":"abc_cba@abc.com",
+     "phoneNumber":"1234567890",
+     "status":"active"
+     },
+     { 
+        "id": "2",
+        "firstName":"def",
+        "lastName":"fed",
+        "email":"def_fed@def.com",
+        "phoneNumber":"0987654321",
+        "status":"inactive"
+    }
+ ]

@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NavbarComponent } from './navbar.component';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { RouterModule, ActivatedRoute } from '@angular/router';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('NavbarComponent', () => {
   let component: NavbarComponent;
@@ -8,7 +12,13 @@ describe('NavbarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NavbarComponent ]
+      imports: [ 
+        HttpClientModule,
+        RouterModule.forRoot([]),
+        RouterTestingModule
+       ], 
+      declarations: [ NavbarComponent ],
+      providers: [ HttpClientTestingModule, HttpClient ]
     })
     .compileComponents();
   }));
@@ -22,4 +32,5 @@ describe('NavbarComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
 });
